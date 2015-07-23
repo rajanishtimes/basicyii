@@ -11,7 +11,7 @@ use Yii;
 use yii\adminUi\assetsBundle\AdminUiAsset as AdminUiAsset;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
-use common\models\extras\Notification;
+
 
 /**
  * NavBar renders a navbar HTML component.
@@ -45,8 +45,8 @@ class NavBarMessage extends Widget
      * Renders the widget.
      */
     public function run(){
-        $notifications = (new Notification())->getUnreadUserNotification();        
-        echo $this->render('navbarmessage',['notifications'=>$notifications]);
+               
+        echo $this->render('navbarmessage');
         AdminUiAsset::register($this->getView());
     }
 

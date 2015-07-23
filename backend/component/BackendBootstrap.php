@@ -21,11 +21,7 @@ use common\models\LoginHistory;
 class BackendBootstrap implements BootstrapInterface{
     public function bootstrap($app){
         
-        Yii::$classMap['taskmanager\TaskManager'] = Yii::getAlias('@taskmanager/TaskManager.php');
-        Yii::$classMap['taskmanager\JobStatus'] = Yii::getAlias('@taskmanager/TaskManager.php');
-        Yii::$classMap['taskmanager\JobHistoryStatus'] = Yii::getAlias('@taskmanager/TaskManager.php');
-        Yii::$classMap['taskmanager\TaskManagerEvent'] = Yii::getAlias('@taskmanager/TaskManagerEvent.php');
-        Yii::$classMap['cdn_service\WhImage'] = Yii::getAlias('@cdnservice/WhImage.php');
+        
         
         /*
          * logging users login history

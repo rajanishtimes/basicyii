@@ -8,8 +8,7 @@ use common\models\SetPass;
 use common\models\LoginForm;
 use common\models\ForgetForm;
 use yii\filters\VerbFilter;
-use common\models\Event;
-use common\models\Venue;
+
 
 /**
  * Site controller
@@ -66,11 +65,8 @@ class SiteController extends Controller
             ]
         ];
         $this->view->params['pagename'] = 'Dashboard';
-        $total_event = Event::find()->where("name != ''")->count();
-        $sourced_event = Event::find()->where('state = 5')->count();
-        $total_venue = Venue::find()->where('status = 1')->count();
-        $sourced_venue = Venue::find()->where('state = 5')->count();
-        return $this->render('index',['total_event'=>$total_event,'sourced_event'=>$sourced_event,'total_venue'=>$total_venue,'sourced_venue'=>$sourced_venue]);
+        
+        return $this->render('index');
     }
 
     public function actionLogin()

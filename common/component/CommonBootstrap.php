@@ -13,6 +13,6 @@ use yii\base\Event;
 
 class CommonBootstrap implements BootstrapInterface{
     public function bootstrap($app){
-        Yii::$classMap['cdn_service\WhImage'] = Yii::getAlias('@cdnservice/WhImage.php');
+        
     }
 }
