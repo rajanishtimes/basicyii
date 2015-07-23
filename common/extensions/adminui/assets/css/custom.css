@@ -1,0 +1,16 @@
+.padding-top-5{
+    padding-top: 5px;
+}
+
+
+.opening_soon{
+    background-color: #DB80D8;
+}
+
+.bg_closed{
+    background-color: #6E8DAD !important;
+}
+
+.bg_other{
+     background-color: #00EB73;
+}
