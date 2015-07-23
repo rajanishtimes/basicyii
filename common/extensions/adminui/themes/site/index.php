@@ -22,8 +22,8 @@ BootstrapLoaderAsset::register($this);
         <!-- small box -->
         <div class="small-box bg-aqua">
             <div class="inner">
-                <h3></h3>
-                <p></p>
+                <h3>1</h3>
+                <p>T</p>
             </div>
             <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -38,10 +38,10 @@ BootstrapLoaderAsset::register($this);
         <div class="small-box bg-green">
             <div class="inner">
                 <h3>
-                    
+                    1
                 </h3>
                 <p>
-                   
+                   T
                 </p>
             </div>
             <div class="icon">
@@ -57,10 +57,10 @@ BootstrapLoaderAsset::register($this);
         <div class="small-box bg-yellow">
             <div class="inner">
                 <h3>
-                    
+                    1
                 </h3>
                 <p>
-                    
+                   T 
                 </p>
             </div>
             <div class="icon">
@@ -76,10 +76,10 @@ BootstrapLoaderAsset::register($this);
         <div class="small-box bg-red">
             <div class="inner">
                 <h3>
-                   
+                   1
                 </h3>
                 <p>
-                    
+                    T
                 </p>
             </div>
             <div class="icon">
