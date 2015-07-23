@@ -1,0 +1,2 @@
+# basicyii
+Basic partner apicode
