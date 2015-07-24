@@ -2,11 +2,6 @@
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 defined('REALM') or define('REALM', 'TmCt');
-define('APPAPI', 'http://dotdot.appapi.whatshot.in/appapi/');
-define('SOLRURL', 'http://192.169.34.184:8886/whatshot/events/dataimport?command=full-import&clean=true');
-define('CMSAPI', 'http://api.devcms.whatshot.in/');
-define('APP_API_DIGEST','admin:b864341098e300bc5bba03');
-define('BASEPATH', "http://" . $_SERVER['SERVER_NAME']);
 
 error_reporting(E_ALL & ~E_NOTICE);
 

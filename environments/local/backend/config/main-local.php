@@ -8,8 +8,7 @@ if (!YII_ENV_TEST) {
     $config['modules']['gii']['generators'] = [
                                                     'modelgen' => ['class' => 'mithun\modulegen\module\Generator']
                                             ];
-    $config['modules']['tools']['class'] = 'backend\modules\tools\Module';
-    $config['modules']['syncsolr']['class'] = 'backend\modules\syncsolr\Module';
+
 }
 
 return $config;

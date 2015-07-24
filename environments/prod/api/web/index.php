@@ -4,7 +4,6 @@ defined('YII_ENV') or define('YII_ENV', 'prod');
 defined('REALM') or define('REALM', 'TmCt');
 
 error_reporting(E_ALL & ~E_NOTICE);
-define('APPAPI', 'http://appapi.whatshot.in/content/');
 require(__DIR__ . '/../../vendor/autoload.php');
 require(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
 require(__DIR__ . '/../../common/config/aliases.php');
