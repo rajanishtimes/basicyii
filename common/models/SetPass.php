@@ -36,7 +36,7 @@ class SetPass extends User
             [['password1','password2'], 'match', 'pattern' => '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@\-.#$%]).{6,16}$/','message' => 'Character are allowed here are number 0-9, alphabet a-z, Capital letter A-Z and Special character (!@#$%-.)'],
             ['password2', 'compare', 'compareAttribute' => 'password1','message' => 'Confirm Password not matched'],
             ['password1', 'setModelPass'],
-            [['Id','password_reset_token','updated_by'],'safe'],
+            [['Id','password_reset_token','updatedBy'],'safe'],
         ];
     }
     

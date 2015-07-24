@@ -15,16 +15,16 @@ class AppActiveRecord extends \yii\db\ActiveRecord
             'timestamp' => [
                 'class' => 'yii\behaviors\TimestampBehavior',
                 'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_on', 'updated_on'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updated_on',
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['createdOn', 'updatedOn'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updatedOn',
                 ],
                 'value' => new Expression('NOW()'),
             ],
             'user' => [
                 'class' => 'yii\behaviors\BlameableBehavior',
                 'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_by', 'updated_by'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updated_by',
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['createdBy', 'updatedBy'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updatedBy',
                 ],
             ],
             'ip' => [
@@ -66,10 +66,10 @@ class AppActiveRecord extends \yii\db\ActiveRecord
     }
     
     public function getCreateTime() {        
-        return date('D, jS M Y \a\t g:ia',  strtotime($this->created_on));
+        return date('D, jS M Y \a\t g:ia',  strtotime($this->createdOn));
     }
     
     public function getUpdateTime() {        
-        return date('D, jS M Y \a\t g:ia',  strtotime($this->updated_on));
+        return date('D, jS M Y \a\t g:ia',  strtotime($this->updatedOn));
     }  
 }

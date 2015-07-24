@@ -40,8 +40,8 @@ class Permission extends AppActiveRecord
     {
         return [
             [['status', 'type'], 'required'],
-            [['Id', 'userId', 'groupId', 'created_by', 'updated_by', 'status', 'type'], 'integer'],
-            [['created_on', 'created_by', 'updated_on', 'updated_by',], 'safe'],
+            [['Id', 'userId', 'groupId', 'createdBy', 'updatedBy', 'status', 'type'], 'integer'],
+            [['createdOn', 'createdBy', 'updatedOn', 'updatedBy',], 'safe'],
             [['module', 'controller', 'action'], 'string', 'max' => 45]
         ];
     }
@@ -60,10 +60,10 @@ class Permission extends AppActiveRecord
             'module' => 'Module Name',
             'controller' => 'Controller Name',
             'action' => 'Action Name',
-            'created_on' => 'Created On',
-            'created_by' => 'Created By',
-            'updated_on' => 'Updated On',
-            'updated_by' => 'Updated By',
+            'createdOn' => 'Created On',
+            'createdBy' => 'Created By',
+            'updatedOn' => 'Updated On',
+            'updatedBy' => 'Updated By',
             'status' => 'Status',
             'type' => 'Permission Type',
         ];

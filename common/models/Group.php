@@ -43,7 +43,7 @@ class Group extends AppActiveRecord
     }
     
     public function getCreateTime() {        
-        return date('D, jS M Y \a\t g:ia',  strtotime($this->updated_on));
+        return date('D, jS M Y \a\t g:ia',  strtotime($this->updatedOn));
     }
     
     public function getStatusName() {

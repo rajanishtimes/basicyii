@@ -12,8 +12,8 @@ use Yii;
  * @property integer $entity_type
  * @property string $url
  * @property string $cache_purge_on
- * @property string $created_on
- * @property string $updated_on
+ * @property string $createdOn
+ * @property string $updatedOn
  */
 class PublishUrl extends \yii\db\ActiveRecord
 {
@@ -33,7 +33,7 @@ class PublishUrl extends \yii\db\ActiveRecord
         return [
             [['entity_id', 'entity_type', 'url'], 'required'],
             [['entity_id', 'entity_type'], 'integer'],
-            [['cache_purge_on', 'created_on', 'updated_on'], 'safe'],
+            [['cache_purge_on', 'createdOn', 'updatedOn'], 'safe'],
             [['url'], 'string', 'max' => 1024],
             //['url','unique']
         ];
@@ -50,8 +50,8 @@ class PublishUrl extends \yii\db\ActiveRecord
             'entity_type' => 'Entity Type',
             'url' => 'Url',
             'cache_purge_on' => 'Cache Purge On',
-            'created_on' => 'Created On',
-            'updated_on' => 'Updated On',
+            'createdOn' => 'Created On',
+            'updatedOn' => 'Updated On',
         ];
     }
     
@@ -64,7 +64,7 @@ class PublishUrl extends \yii\db\ActiveRecord
         if(!$PurgeModel){
             $PurgeModel = new PurgeUrl();
             $PurgeModel->url = $this->url;
-            $PurgeModel->created_on = date('Y-m-d H:i:s');
+            $PurgeModel->createdOn = date('Y-m-d H:i:s');
             $PurgeModel->save();
         }
         else{
@@ -79,7 +79,7 @@ class PublishUrl extends \yii\db\ActiveRecord
             if(!$already){
                 $PurgeModel = new PurgeUrl();
                 $PurgeModel->url = $old->url;
-                $PurgeModel->created_on = date('Y-m-d H:i:s');
+                $PurgeModel->createdOn = date('Y-m-d H:i:s');
                 $PurgeModel->save();
             }
             else{

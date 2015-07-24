@@ -182,16 +182,16 @@ class AppActiveRecord extends \yii\db\ActiveRecord
             'timestamp' => [
                 'class' => 'yii\behaviors\TimestampBehavior',
                 'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_on', 'updated_on'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updated_on',
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['createdOn', 'updatedOn'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updatedOn',
                 ],
                 'value' => new Expression('NOW()'),
             ],
             'user' => [
                 'class' => 'yii\behaviors\BlameableBehavior',
                 'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_by', 'updated_by'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updated_by',
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['createdBy', 'updatedBy'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updatedBy',
                 ],
             ],
             'ip' => [
@@ -488,7 +488,7 @@ class AppActiveRecord extends \yii\db\ActiveRecord
     
     public function checkdraft() {
         if($this->state == self::STATUS_DRAFT){
-            return (\yii::$app->user->id == $this->created_by) ? true : false;
+            return (\yii::$app->user->id == $this->createdBy) ? true : false;
         }else{
             return true;
         }
@@ -503,11 +503,11 @@ class AppActiveRecord extends \yii\db\ActiveRecord
     }
     
     public function getCreateTime() {        
-        return date('D, jS M Y \a\t g:ia',  strtotime($this->created_on));
+        return date('D, jS M Y \a\t g:ia',  strtotime($this->createdOn));
     }
     
     public function getUpdateTime() {        
-        return date('D, jS M Y \a\t g:ia',  strtotime($this->updated_on));
+        return date('D, jS M Y \a\t g:ia',  strtotime($this->updatedOn));
     }
     
     public function converttoArray($datastr) {
@@ -589,7 +589,7 @@ class AppActiveRecord extends \yii\db\ActiveRecord
             $data[$model['state']] = $model['cnt'];
         }
         
-        $data[self::STATUS_DRAFT] = $this->find()->where(['state'=>self::STATUS_DRAFT,'created_by'=>  \yii::$app->user->id])->count();
+        $data[self::STATUS_DRAFT] = $this->find()->where(['state'=>self::STATUS_DRAFT,'createdBy'=>  \yii::$app->user->id])->count();
         
         $dataval = [];
         foreach($data as $id=>$val){

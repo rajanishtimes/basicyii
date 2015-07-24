@@ -1,7 +1,7 @@
 <?php
 $config['components']['db'] = [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=192.169.31.167;dbname=whcontent',
+            'dsn' => 'mysql:host=192.169.31.167;dbname=whpartner',
             'username' => 'whFire',
             'password' => 'Times@123',
             'charset' => 'utf8',

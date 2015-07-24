@@ -78,8 +78,8 @@ class KalturaConverter extends AssetProcess implements UploaderInterface{
                         'thumbnailUrl' => $content['thumbnailUrl'],
                     ]);
                     
-                    $model->createdBy = $data['created_by'];
-                    $model->updatedBy = $data['created_by'];
+                    $model->createdBy = $data['createdBy'];
+                    $model->updatedBy = $data['createdBy'];
                     $model->createdOn = $data['insertdate'];
                     $model->updatedOn = $data['insertdate'];
                     $model->ip = $data['IP'];

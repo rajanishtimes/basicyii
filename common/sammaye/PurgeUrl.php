@@ -11,7 +11,7 @@ use Yii;
  * @property string $url
  * @property string $response
  * @property integer $status
- * @property string $created_on
+ * @property string $createdOn
  */
 class PurgeUrl extends \yii\db\ActiveRecord
 {
@@ -32,7 +32,7 @@ class PurgeUrl extends \yii\db\ActiveRecord
             [['url'], 'required'],
             [['response'], 'string'],
             [['status'], 'integer'],
-            [['created_on','response'], 'safe'],
+            [['createdOn','response'], 'safe'],
             //[['url'], 'string', 'max' => 1024]
         ];
     }
@@ -47,7 +47,7 @@ class PurgeUrl extends \yii\db\ActiveRecord
             'url' => 'Url',
             'response' => 'Response',
             'status' => 'Status',
-            'created_on' => 'Created On',
+            'createdOn' => 'Created On',
         ];
     }
 }

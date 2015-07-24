@@ -41,7 +41,7 @@ $home_uri = Url::home(true);
                                 <p><?=$noty['short_msg']?></p>
                                 <p>
                                     <small><i class="fa fa-clock-o"></i> &nbsp;
-                                    <?php echo date('M j, h:i a',  strtotime($noty['created_on']));?></small>
+                                    <?php echo date('M j, h:i a',  strtotime($noty['createdOn']));?></small>
                                 </p>
                             </a>
                         </li>

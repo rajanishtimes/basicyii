@@ -15,8 +15,8 @@ class UserSearch extends User
     public function rules()
     {
         return [
-            [['Id', 'role', 'status', 'created_by', 'updated_by', 'groupId', 'reportTo', 'reportUserType'], 'integer'],
-            [['username', 'auth_key', 'password_hash', 'password_reset_token', 'email', 'created_on', 'updated_on', 'firstname', 'lastname', 'phone'], 'safe'],
+            [['Id', 'role', 'status', 'createdBy', 'updatedBy', 'groupId', 'reportTo', 'reportUserType'], 'integer'],
+            [['username', 'auth_key', 'password_hash', 'password_reset_token', 'email', 'createdOn', 'updatedOn', 'firstname', 'lastname', 'phone'], 'safe'],
         ];
     }
 
@@ -42,10 +42,10 @@ class UserSearch extends User
             'Id' => $this->Id,
             'role' => $this->role,
             'status' => $this->status,
-            'created_on' => $this->created_on,
-            'updated_on' => $this->updated_on,
-            'created_by' => $this->created_by,
-            'updated_by' => $this->updated_by,
+            'createdOn' => $this->createdOn,
+            'updatedOn' => $this->updatedOn,
+            'createdBy' => $this->createdBy,
+            'updatedBy' => $this->updatedBy,
             'groupId' => $this->groupId,
             'reportTo' => $this->reportTo,
             'reportUserType' => $this->reportUserType,

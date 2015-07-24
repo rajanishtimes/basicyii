@@ -269,7 +269,7 @@ class User extends AppActiveRecord implements UserIdentityInterface
             [['phone'], 'string', 'max' => 10],
             [['groupId', 'reportTo', 'reportUserType'], 'integer'],
             ['groupId', 'integer','min'=>1],
-            [['firstname','lastname','token','updated_by','created_by','updated_on','created_on'],'safe']
+            [['firstname','lastname','token','updatedBy','createdBy','updatedOn','createdOn'],'safe']
         ];
     }
     
@@ -287,12 +287,12 @@ class User extends AppActiveRecord implements UserIdentityInterface
             'email' => Yii::t('app', 'Email'),
             'role' => Yii::t('app', 'Role'),
             'status' => Yii::t('app', 'Status'),
-            'created_on' => Yii::t('app', 'Created On'),
+            'createdOn' => Yii::t('app', 'Created On'),
             'createTime' => Yii::t('app', 'Created On'),
             'updateTime' => Yii::t('app', 'Updated On'),
-            'updated_on' => Yii::t('app', 'Updated On'),
-            'created_by' => Yii::t('app', 'Created By'),
-            'updated_by' => Yii::t('app', 'Updated By'),
+            'updatedOn' => Yii::t('app', 'Updated On'),
+            'createdBy' => Yii::t('app', 'Created By'),
+            'updatedBy' => Yii::t('app', 'Updated By'),
             'createdByUser' => Yii::t('app', 'Created By'),
             'updatedByUser' => Yii::t('app', 'Updated By'),
             'firstname' => Yii::t('app', 'Firstname'),
@@ -345,7 +345,7 @@ class User extends AppActiveRecord implements UserIdentityInterface
      */
     public function getCreatedByWhom()
     {
-        return $this->hasOne(User::className(), ['Id' => 'created_by']);
+        return $this->hasOne(User::className(), ['Id' => 'createdBy']);
     }
     
     /**
@@ -353,7 +353,7 @@ class User extends AppActiveRecord implements UserIdentityInterface
      */
     public function getUpdatedByWhom()
     {
-        return $this->hasOne(User::className(), ['Id' => 'updated_by']);
+        return $this->hasOne(User::className(), ['Id' => 'updatedBy']);
     }
 
     /**

@@ -100,7 +100,7 @@ class ForgetForm extends Model
             $user = $this->getUser();
             
             $user->generatePasswordResetToken();
-            $user->updated_by = $user->Id;
+            $user->updatedBy = $user->Id;
             $user->save();
 
             // modify view path to module views

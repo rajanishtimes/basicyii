@@ -51,7 +51,7 @@ class PublishUrlBehavior extends Behavior
         public function savePublishUrl($entityId,$entityType,$url){
             $model = PublishUrl::find()->where(['url'=>$url,'entity_id'=>$entityId,'entity_type'=>$entityType])->orderBy('id desc')->one();
             if($model){
-                $model->updated_on = date('Y-m-d H:i:s');
+                $model->updatedOn = date('Y-m-d H:i:s');
                 if($model->save()){
                     $model->addUrlToCachePurge();
                     Yii::info("entity re-published with same url",'url-publish');
@@ -62,7 +62,7 @@ class PublishUrlBehavior extends Behavior
                 $model->entity_id = $entityId;
                 $model->entity_type = $entityType;
                 $model->url = $url;
-                $model->created_on = date('Y-m-d H:i:s');
+                $model->createdOn = date('Y-m-d H:i:s');
                 if($model->save()){
                     $model->addOldUrlToCachePurge();
                     Yii::info("entity published new url",'url-publish');                    

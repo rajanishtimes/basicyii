@@ -11,10 +11,10 @@ use yii\data\ActiveDataProvider;
  * @property string $id
  * @property integer $user_id
  * @property string $login_time
- * @property integer $created_by
- * @property integer $updated_by
- * @property string $created_on
- * @property string $updated_on
+ * @property integer $createdBy
+ * @property integer $updatedBy
+ * @property string $createdOn
+ * @property string $updatedOn
  * @property string $ip
  * @property integer $status
  */
@@ -36,8 +36,8 @@ class LoginHistory extends AppActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'created_by', 'updated_by', 'status'], 'integer'],
-            [['login_time', 'created_on', 'updated_on','name','username'], 'safe'],
+            [['userId', 'createdBy', 'updatedBy', 'status'], 'integer'],
+            [['login_time', 'createdOn', 'updatedOn','name','username'], 'safe'],
             [['ip'], 'string', 'max' => 25]
         ];
     }
@@ -49,12 +49,12 @@ class LoginHistory extends AppActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'user_id' => Yii::t('app', 'User ID'),
-            'login_time' => Yii::t('app', 'Login Time'),
-            'created_by' => Yii::t('app', 'Created By'),
-            'updated_by' => Yii::t('app', 'Updated By'),
-            'created_on' => Yii::t('app', 'Created On'),
-            'updated_on' => Yii::t('app', 'Updated On'),
+            'userId' => Yii::t('app', 'User ID'),
+            'loginTime' => Yii::t('app', 'Login Time'),
+            'createdBy' => Yii::t('app', 'Created By'),
+            'updatedBy' => Yii::t('app', 'Updated By'),
+            'createdOn' => Yii::t('app', 'Created On'),
+            'updatedOn' => Yii::t('app', 'Updated On'),
             'ip' => Yii::t('app', 'Ip'),
             'status' => Yii::t('app', 'Status'),
         ];

@@ -16,7 +16,7 @@ if($type=='topbar'){
 		<img src="<?php echo $bundle->baseUrl?>/img/avatar3.png" class="img-circle" alt="User Image" />
 		<p>
 			<?=Yii::$app->user->identity->firstname?> - <?=Yii::$app->user->identity->groupName?>
-                        <small><?php echo (Yii::$app->user->identity->created_on) ? 'Member since '.date('M. Y',  strtotime(Yii::$app->user->identity->created_on)) : '';?></small>
+                        <small><?php echo (Yii::$app->user->identity->createdOn) ? 'Member since '.date('M. Y',  strtotime(Yii::$app->user->identity->createdOn)) : '';?></small>
 		</p>
 	</li>
         <?php /*/?>
