@@ -21,9 +21,6 @@ define(_ENV_, yii::$app->params['env']);
 class ConsoleBootstrap implements BootstrapInterface{
     public function bootstrap($app){
         
-        Yii::$classMap['taskmanager\TaskManager'] = Yii::getAlias('@taskmanager/TaskManager.php');
-        Yii::$classMap['cdn_service\WhImage'] = Yii::getAlias('@cdnservice/WhImage.php');
-        
         Event::on(ActiveRecord::classname(),  AppActiveRecord::EVENT_AFTER_TRANCINSERT,function ($event){
             TcEventAction::EventActionAfterTrancInsert($event);
              
