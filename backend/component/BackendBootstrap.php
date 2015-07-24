@@ -27,11 +27,11 @@ class BackendBootstrap implements BootstrapInterface{
          * logging users login history
          */
         Event::on('\yii\web\User', \yii\web\User::EVENT_AFTER_LOGIN,function ($event){
-            Yii::info('in after login event handler','login');
-             $logHistory=new LoginHistory();
-            $logHistory->user_id=\Yii::$app->user->identity->id;
-            $logHistory->login_time=date("Y-m-d H:i:s");
-              $logHistory->save(false);
+//            Yii::info('in after login event handler','login');
+//             $logHistory=new LoginHistory();
+//            $logHistory->user_id=\Yii::$app->user->identity->id;
+//            $logHistory->login_time=date("Y-m-d H:i:s");
+//              $logHistory->save(false);
              
         });
         
