@@ -82,11 +82,11 @@ class Group extends AppActiveRecord
     public function rules()
     {
         return [
-            [['created_by', 'updated_by','parentId'], 'integer'],
+            [['createdBy', 'updatedBy','parentId'], 'integer'],
             [['name'], 'required'],
             ['name', 'common\validators\AlphanumericValidator'],
             [['status'], 'string'],
-            [['created_on', 'updated_on','created_on', 'updated_on'], 'safe'],
+            [['createdOn', 'updatedOn'], 'safe'],
             [['name'], 'string', 'max' => 25]
         ];
     }
@@ -101,10 +101,10 @@ class Group extends AppActiveRecord
             'name' => 'Name',
             'parentId' => 'Parent Group',
             'status' => 'Status',
-            'created_by' => Yii::t('app', 'Created By'),
-            'updated_by' => Yii::t('app', 'Updated By'),
-            'created_on' => Yii::t('app', 'Created On'),
-            'updated_on' => Yii::t('app', 'Updated On'),
+            'createdBy' => Yii::t('app', 'Created By'),
+            'updatedBy' => Yii::t('app', 'Updated By'),
+            'createdOn' => Yii::t('app', 'Created On'),
+            'updatedOn' => Yii::t('app', 'Updated On'),
             'ParentGroup' => Yii::t('app', 'Parent Group'),
             'StatusName' => Yii::t('app', 'Status'),
             'CreateTime' => Yii::t('app', 'Created Time'),
